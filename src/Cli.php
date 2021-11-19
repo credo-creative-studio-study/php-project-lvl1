@@ -1,14 +1,20 @@
 <?php
 
-  namespace Php\Project\Lvl1\Cli;
+/**
+ * This file contains an example of coding styles.
+*/
 
-  use function cli\line;
-  use function cli\prompt;
+namespace Php\Project\Lvl1\Cli;
 
-  function greetings()
-  {
+use function cli\line;
+use function cli\prompt;
+
+function greetings()
+{
+
     line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name?');
-    line('Hello, %s!', $name);
-  }
 
+    $name = prompt('May I have your name?');
+
+    line('Hello, %s!', $name);
+}
