@@ -11,5 +11,10 @@
             "email": "credo.creative.creative.study@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "description": "Study project",
+    "license": "MIT",
+    "bin": [
+        "bin/brain-games"
+    ]
 }
