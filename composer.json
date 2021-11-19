@@ -1,0 +1,15 @@
+{
+    "name": "hexlet/code",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "credo-reative-studio-study",
+            "email": "credo.creative.creative.study@gmail.com"
+        }
+    ],
+    "require": {}
+}
