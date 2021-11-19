@@ -9,3 +9,6 @@ validate:
 
 update:
 	composer update
+
+autoload:
+	composer dump-autoload;
