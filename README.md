@@ -4,5 +4,10 @@
 ![LintTesting](https://github.com/credo-creative-studio-study/php-project-lvl1/actions/workflows/lint.yml/badge.svg?event=push)
 
 ### Asciinema
+
+#### brain-even
 [Asciinema example](https://asciinema.org/a/vpZqWuAFjx2Lky8wLTKlz2wY7)
+
+#### brain-calc
+[Asciinema example](https://asciinema.org/a/SH4ym8uriX1TFuAVsEWLfvOZU)
 
