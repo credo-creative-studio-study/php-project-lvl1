@@ -11,3 +11,6 @@
 #### brain-calc
 [Asciinema example](https://asciinema.org/a/SH4ym8uriX1TFuAVsEWLfvOZU)
 
+#### brain-calc
+[Asciinema example](https://asciinema.org/a/scTHA5BVqlWCoA6I74XTkjHJA)
+

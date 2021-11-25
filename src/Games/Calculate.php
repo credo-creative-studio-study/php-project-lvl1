@@ -51,13 +51,13 @@ function brain_calc()
         $arr = explode(' ', $str);
         $calculate = function ($operator, $x, $y) {
             if ($operator === '+') {
-                return $x + $y;
+                return add($x, $y);
             }
             if ($operator === '-') {
-                return $x - $y;
+                return substract($x, $y);
             }
             if ($operator === '*') {
-                return $x * $y;
+                return multiply($x, $y);
             }
         };
         return (string) $calculate($arr[1], $arr[0], $arr[2]);
