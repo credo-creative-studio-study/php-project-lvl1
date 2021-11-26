@@ -13,7 +13,7 @@ function generate_random_number($x = 1, $y = 10): int
 
 function is_even($num): bool
 {
-    return (bool) $num % 2 === 0;
+    return $num % 2 === 0 ? true : false;
 }
 
 function is_prime($num)

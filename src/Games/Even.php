@@ -17,12 +17,6 @@ function brain_even()
     };
 
     $find_result = function (int $num): string {
-        if ($num === 1) {
-            return 'no';
-        }
-        if ($num === 2) {
-            return 'yes';
-        }
         return is_even($num) ? 'yes' : 'no';
     };
 
