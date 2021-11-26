@@ -16,7 +16,7 @@ function run($condition_str = null, $create_expression = null, $calculate_result
     $i = 0;
     $name = prompt('May I have your name?');
 
-    line('Hello, my friend %s!', $name);
+    line('Hello, %s!', $name);
 
     if ($condition_str) {
         line($condition_str);
