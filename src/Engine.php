@@ -9,7 +9,7 @@ namespace Php\Project\Lvl1\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function run($condition_str = null, $create_expression = null, $calculate_result = null, $count = 3)
+function run(string $condition = null, callable $get_expression = null, callable $get_result = null, $count = 3)
 {
     line('Welcome to the Brain Game!');
 
@@ -18,11 +18,11 @@ function run($condition_str = null, $create_expression = null, $calculate_result
 
     line('Hello, %s!', $name);
 
-    if ($condition_str) {
-        line($condition_str);
+    if ($condition) {
+        line($condition);
         while ($i < $count) {
-            $expression = $create_expression();
-            $result = $calculate_result($expression);
+            $expression = $get_expression();
+            $result = $get_result($expression);
             line('Question: %s', $expression);
             $answer = prompt('Your answer');
             if ($answer === $result) {
