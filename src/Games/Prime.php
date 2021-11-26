@@ -4,28 +4,22 @@
  * This file contains an example of coding styles.
 */
 
-namespace Php\Project\Lvl1\Games\Even;
+namespace Php\Project\Lvl1\Games\Prime;
 
 use function Php\Project\Lvl1\Engine\run;
 use function Php\Project\Lvl1\Helpers\generate_random_number;
-use function Php\Project\Lvl1\Helpers\is_even;
+use function Php\Project\Lvl1\Helpers\is_prime;
 
-function brain_even()
+function brain_prime()
 {
     $generate_random_number = function () {
         return generate_random_number();
     };
 
     $find_result = function (int $num): string {
-        if ($num === 1) {
-            return 'no';
-        }
-        if ($num === 2) {
-            return 'yes';
-        }
-        return is_even($num) ? 'yes' : 'no';
+        return is_prime($num) ? 'yes' : 'no';
     };
 
-    $condition = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $condition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     run($condition, $generate_random_number, $find_result);
 }

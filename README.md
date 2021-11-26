@@ -17,3 +17,5 @@
 #### brain-progression
 [Asciinema example](https://asciinema.org/a/ptC2bUgefhcs5glvWfauF7EM5)
 
+#### brain-prime
+[Asciinema example](https://asciinema.org/a/ShHEwSXiH1Kz9ZO27gyo3cfgt)
