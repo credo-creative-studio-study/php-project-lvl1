@@ -6,7 +6,7 @@
 
 namespace Php\Project\Lvl1\Helpers;
 
-function generate_random_number(): int
+function generate_random_number($x = 1, $y = 10): int
 {
-    return rand(1, 10);
+    return rand($x, $y);
 }
