@@ -22,8 +22,8 @@ function run(string $condition = null, callable $get_expression = null, callable
     if ($has_condition) {
         line($condition);
         while ($i < $count) {
-            $expression = $get_expression();
-            $result = $get_result($expression);
+            $expression = is_callable($get_expression) ? $get_expression() : $get_expression;
+            $result = is_callable($get_result) ? $get_result($expression) : $get_result;
             line('Question: %s', $expression);
             $answer = prompt('Your answer');
             if ($answer === $result) {
