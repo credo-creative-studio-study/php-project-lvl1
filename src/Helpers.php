@@ -6,17 +6,17 @@
 
 namespace Php\Project\Lvl1\Helpers;
 
-function generate_random_number($x = 1, $y = 10): int
+function generate_random_number(int $x = 1, int $y = 10): int
 {
     return rand($x, $y);
 }
 
-function is_even($num): bool
+function is_even(int $num): bool
 {
     return $num % 2 === 0 ? true : false;
 }
 
-function is_prime($num)
+function is_prime(int $num)
 {
     if ($num === 1) {
         return false;

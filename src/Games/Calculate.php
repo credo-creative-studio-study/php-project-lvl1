@@ -49,7 +49,7 @@ function brain_calc()
 
     $result_calc = function ($str) {
         $arr = explode(' ', $str);
-        $calculate = function (string $operator, int $x, int $y) {
+        $calculate = function (string $operator, string $x, string $y) {
             if ($operator === '+') {
                 return add($x, $y);
             }

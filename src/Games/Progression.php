@@ -32,15 +32,15 @@ function brain_progression()
 
     $result_calc = function ($str) {
         $nums = explode(' ', $str);
-        $index = array_search('..', $nums);
+        $index = array_search('..', $nums, false);
         if ($index !== 0 && $index !== (count($nums) - 1)) {
-            $num = ($nums[$index - 1] + $nums[$index + 1]) / 2;
+            $num = ((int) $nums[$index - 1] + (int) $nums[$index + 1]) / 2;
         } elseif ($index === 0) {
-            $diff = $nums[$index + 2] - $nums[$index + 1];
-            $num = $nums[$index + 1] - $diff;
+            $diff = (int) $nums[$index + 2] - (int) $nums[$index + 1];
+            $num = (int) $nums[$index + 1] - $diff;
         } elseif ($index === (count($nums) - 1)) {
-            $diff = $nums[$index - 1] - $nums[$index - 2];
-            $num = $nums[$index - 1] + $diff;
+            $diff = (int) $nums[$index - 1] - (int) $nums[$index - 2];
+            $num = (int) $nums[$index - 1] + $diff;
         }
 
         return (string) $num;
