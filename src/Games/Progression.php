@@ -45,8 +45,10 @@ function brain_progression()
             $diff = $b - $a;
             $num = $b + $diff;
         } else {
-            $a = (int) $nums[$index - 1];
-            $b = (int) $nums[$index + 1];
+            $prev_index = $index - 1;
+            $next_index = $index + 1;
+            $a = (int) $nums[$prev_index];
+            $b = (int) $nums[$next_index];
             $num = ($a + $b) / 2;
         }
 
