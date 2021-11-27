@@ -9,19 +9,19 @@ namespace Php\Project\Lvl1\Games\Calculate;
 use function Php\Project\Lvl1\Helpers\generate_random_number;
 use function Php\Project\Lvl1\Engine\run;
 
-function add($x, $y)
+function add(int $x, int $y, bool $is_expression = null)
 {
-    return $x + $y;
+    return $is_expression !== null ? "{$x} + {$y}" : $x + $y;
 }
 
-function substract($x, $y)
+function substract(int $x, int $y, bool $is_expression = null)
 {
-    return $x - $y;
+    return $is_expression !== null ? "{$x} - {$y}" : $x - $y;
 }
 
-function multiply($x, $y)
+function multiply(int $x, int $y, bool $is_expression = null)
 {
-    return $x * $y;
+    return $is_expression !== null ? "{$x} * {$y}" : $x * $y;
 }
 
 function brain_calc()
@@ -30,16 +30,16 @@ function brain_calc()
         $x = generate_random_number();
         $y = generate_random_number();
 
-        $add = function ($x, $y) {
-            return "{$x} + {$y}";
+        $add = function (int $x, int $y) {
+            return add($x, $y, true);
         };
 
-        $substract = function ($x, $y) {
-            return "{$x} - {$y}";
+        $substract = function (int $x, int $y) {
+            return substract($x, $y, true);
         };
 
-        $multiply = function ($x, $y) {
-            return "{$x} * {$y}";
+        $multiply = function (int $x, int $y) {
+            return multiply($x, $y, true);
         };
 
         $operators = [$add, $substract, $multiply];
@@ -49,7 +49,7 @@ function brain_calc()
 
     $result_calc = function ($str) {
         $arr = explode(' ', $str);
-        $calculate = function ($operator, $x, $y) {
+        $calculate = function (string $operator, int $x, int $y) {
             if ($operator === '+') {
                 return add($x, $y);
             }
