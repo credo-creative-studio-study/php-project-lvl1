@@ -15,7 +15,7 @@ function run(string $condition = null, mixed $get_expression = null, mixed $get_
 
     $i = 0;
     $name = prompt('May I have your name?');
-    $has_condition = $condition ? true : false;
+    $has_condition = $condition !== null ? true : false;
 
     line('Hello, %s!', $name);
 
