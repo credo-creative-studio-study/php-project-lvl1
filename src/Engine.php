@@ -9,7 +9,7 @@ namespace Php\Project\Lvl1\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function run(string $condition = null, mixed $get_expression = null, mixed $get_result = null, int $count = 3)
+function run(string $condition = null, callable $get_expression = null, callable $get_result = null, int $count = 3)
 {
     line('Welcome to the Brain Game!');
 
