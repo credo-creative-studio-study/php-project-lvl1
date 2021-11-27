@@ -34,11 +34,7 @@ function brain_progression()
         $nums = explode(' ', $str);
         $index = array_search('..', $nums, true);
         $num = '';
-        if ($index !== 0 && $index !== (count($nums) - 1)) {
-            $a = (int) $nums[$index - 1];
-            $b = (int) $nums[$index + 1];
-            $num = ($a + $b) / 2;
-        } elseif ($index === 0) {
+        if ($index === 0) {
             $a = (int) $nums[$index + 1];
             $b = (int) $nums[$index + 2];
             $diff = $b - $a;
@@ -48,6 +44,10 @@ function brain_progression()
             $b = (int) $nums[$index - 1];
             $diff = $b - $a;
             $num = $b + $diff;
+        } else {
+            $a = (int) $nums[$index - 1];
+            $b = (int) $nums[$index + 1];
+            $num = ($a + $b) / 2;
         }
 
         return (string) $num;
