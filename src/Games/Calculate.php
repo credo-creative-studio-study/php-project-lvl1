@@ -9,19 +9,19 @@ namespace Php\Project\Lvl1\Games\Calculate;
 use function Php\Project\Lvl1\Helpers\generate_random_number;
 use function Php\Project\Lvl1\Engine\run;
 
-function add(int $x, int $y, bool $is_expression = null)
+function add(string $x, string $y, bool $is_expression = null)
 {
-    return $is_expression !== null ? "{$x} + {$y}" : $x + $y;
+    return $is_expression !== null ? "{$x} + {$y}" : (int) $x + (int) $y;
 }
 
-function substract(int $x, int $y, bool $is_expression = null)
+function substract(string $x, string $y, bool $is_expression = null)
 {
-    return $is_expression !== null ? "{$x} - {$y}" : $x - $y;
+    return $is_expression !== null ? "{$x} - {$y}" : (int) $x - (int) $y;
 }
 
-function multiply(int $x, int $y, bool $is_expression = null)
+function multiply(string $x, string $y, bool $is_expression = null)
 {
-    return $is_expression !== null ? "{$x} * {$y}" : $x * $y;
+    return $is_expression !== null ? "{$x} * {$y}" : (int) $x * (int) $y;
 }
 
 function brain_calc()
